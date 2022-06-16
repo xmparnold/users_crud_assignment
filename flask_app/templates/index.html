@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>All Users</h1>
+
+    <div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+            </tr>
+
+            {% for element in list_users: %}
+            <tr>
+                <td>{{ element.id }}</td>
+                <td>{{ element.first_name }} {{ element.last_name }}</td>
+                <td>{{ element.email }}</td>
+                <td>{{ element.created_at }}</td>
+                <td>{{ element.updated_at }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <a href="/newuser">Add new user</a>
+</body>
+</html>
